@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { deleteContacts } from '../../redux/contact/contact-actions';
+import { deleteContacts } from '../../redux/contact/contact-operations';
 
 const ContactList = ({ contacts, onDeleteContacts }) =>
   contacts !== [] ? (

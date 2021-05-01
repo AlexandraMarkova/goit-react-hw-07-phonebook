@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { connect } from 'react-redux';
-import { addContacts } from '../../redux/contact/contact-actions';
+import * as operations from '../../redux/contact/contact-operations';
 
 class ContactForm extends Component {
   state = {
@@ -78,7 +78,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onSubmit: data => dispatch(addContacts(data)),
+  onSubmit: data => dispatch(operations.addContacts(data)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContactForm);
